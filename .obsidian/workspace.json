@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "4e21672226be4a99",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d2182a8e756cd88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c06c76c84817b0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "views/Need Score.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Need Score"
+            }
+          },
+          {
+            "id": "23934da8ba4f5ae4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "views/Search.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Search"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6dbd72675a6161e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "51a08bb5765a205f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "579a0420ae2a4810",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d214ad61c7f3691c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "60d90fcf5c8a06f1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 413.5
+  },
+  "right": {
+    "id": "45da86b1af194dcd",
+    "type": "split",
+    "children": [
+      {
+        "id": "42bc63fcde729f9e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fafcabdbfcb9af4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "minis/Warhammer 40k/Death Guard/Blight Hauler/Seuchendrescher.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Seuchendrescher"
+            }
+          },
+          {
+            "id": "f8df0b6f08769aad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "minis/Warhammer 40k/Death Guard/Blight Hauler/Seuchendrescher.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Seuchendrescher"
+            }
+          },
+          {
+            "id": "526ab79cfb2993bd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e553019957c67bf5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "minis/Warhammer 40k/Death Guard/Blight Hauler/Seuchendrescher.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Seuchendrescher"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "23934da8ba4f5ae4",
+  "lastOpenFiles": [
+    "views/Top 20.md",
+    "views/Scoring.md",
+    "views/Need Score.md",
+    "views/General Stats.md",
+    "minis/Warhammer 40k/Death Guard/Deathshroud Bodyguard/Gorthak Seelenschimmel.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Varkhon der Schlächter.md",
+    "minis/Warhammer 40k/World Eater/Demon Possessed/Blutrausch Zarnok.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Garrnoth Schleimfeder.md",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250604_130139386.jpg",
+    "minis/00template.md",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250604_123758146.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250604_115924462.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250531_172601871.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250531_172610148.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder/PXL_20250604_122750224.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/garrnoth-schleimfeder",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Drulgor.md",
+    "minis/Warhammer 40k/World Eater/Demon Possessed/Karnath der Zerschmetterer.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Rotgar.md",
+    "views/Search.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Axarion der Kettensänger.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Gorthar, Sohn des Zorns.md",
+    "minis/Warhammer 40k/Death Guard/Deathshroud Bodyguard/Morveth Grabhauch.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Morbulus.md",
+    "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240221_140056366.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240221_115454066.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240226_164603703.jpg",
+    "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240227_155510355.jpg",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Moltrus.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Molov Faecgor.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Karrg'thul der Unverrottbare.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Grathok.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorvax, die Bastion der Seuche.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorthul.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Festox.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Fäulnix der Blähende.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Faulgrim Schlachterseele.md",
+    "assets/warhammer-40k/death-guard/deathshroud-bodyguard/morveth-grabhauch",
+    "assets/warhammer-40k/world-eater/khorne-beserker/gorthar-sohn-des-zorns",
+    "assets/warhammer-40k/world-eater/terminator/zarnath-der-knochenspalter",
+    "assets/warhammer-40k/world-eater/khorne-beserker/axarion-der-kettensänger",
+    "assets/warhammer-40k/world-eater/chaos-defiler/schlächterschmied-khor-varn",
+    "assets/warhammer-40k/world-eater/chaos-defiler",
+    "minis/Warhammer 40k/World Eater/Chaos Defiler",
+    "assets/sonstige/blaue-ritter-siegfried",
+    "assets/sonstige/grinch",
+    "Untitled.canvas"
+  ]
+}
