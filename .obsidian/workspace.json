@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "views/Need Score.md",
+                "file": "views/General Stats.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Need Score"
+              "title": "General Stats"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,11 +180,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "23934da8ba4f5ae4",
+  "active": "2c06c76c84817b0d",
   "lastOpenFiles": [
-    "views/Top 20.md",
     "views/Scoring.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Harnok.md",
     "views/Need Score.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Krendax.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Kharvox.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Durrax.md",
+    "minis/Warhammer 40k/Death Guard/Poxwalker/Gammelfred.md",
+    "minis/Warhammer 40k/World Eater/Khorne Berserker/Rarg.md",
+    "minis/Warhammer 40k/World Eater/Dreadnought/Kharzon, der Kettensarg.md",
+    "minis/Warhammer 40k/World Eater/Chaos Lord/Drokhan Kettenschlag.md",
+    "views/Search.md",
+    "views/Top 20.md",
     "views/General Stats.md",
     "minis/Warhammer 40k/Death Guard/Deathshroud Bodyguard/Gorthak Seelenschimmel.md",
     "minis/Warhammer 40k/World Eater/Khorne Berserker/Varkhon der Schlächter.md",
@@ -202,7 +210,6 @@
     "minis/Warhammer 40k/Death Guard/Plague Marine/Drulgor.md",
     "minis/Warhammer 40k/World Eater/Demon Possessed/Karnath der Zerschmetterer.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Rotgar.md",
-    "views/Search.md",
     "minis/Warhammer 40k/World Eater/Khorne Berserker/Axarion der Kettensänger.md",
     "minis/Warhammer 40k/World Eater/Khorne Berserker/Gorthar, Sohn des Zorns.md",
     "minis/Warhammer 40k/Death Guard/Deathshroud Bodyguard/Morveth Grabhauch.md",
@@ -212,14 +219,6 @@
     "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240226_164603703.jpg",
     "assets/warhammer-40k/death-guard/plague-marine/morbulus/PXL_20240227_155510355.jpg",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Moltrus.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Molov Faecgor.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Karrg'thul der Unverrottbare.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Grathok.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorvax, die Bastion der Seuche.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorthul.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Festox.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Fäulnix der Blähende.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Faulgrim Schlachterseele.md",
     "assets/warhammer-40k/death-guard/deathshroud-bodyguard/morveth-grabhauch",
     "assets/warhammer-40k/world-eater/khorne-beserker/gorthar-sohn-des-zorns",
     "assets/warhammer-40k/world-eater/terminator/zarnath-der-knochenspalter",
