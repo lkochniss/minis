@@ -1,11 +1,11 @@
 ---
-spielsystem: 
+spielsystem: Die Zwerge
 bewertung: 
-einheit: Plague Marine
-armee: Death Guard
+einheit: 
+armee: 
 fraktion: 
 modelltyp: 
-hersteller: Games Workshop
+hersteller:
 ---
 
 ```dataview

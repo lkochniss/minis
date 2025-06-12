@@ -5,7 +5,7 @@ fertigstellung: 2022-08-05
 fraktion: 
 armee: 
 einheit: 
-spielsystem: Die Zwerge
+spielsystem: 
 modelltyp: Monster
 hersteller: 
 techniken: 
