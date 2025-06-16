@@ -1,7 +1,7 @@
 ---
 kategorie: Sci-Fi
 bewertung: 
-fertigstellung: ""
+fertigstellung: 2024-05-18
 fraktion: Chaos
 armee: Death Guard
 einheit: Plague Marine

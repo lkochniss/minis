@@ -1,7 +1,7 @@
 ---
 kategorie: Sci-Fi
 bewertung: 
-fertigstellung: ""
+fertigstellung: 2024-04-24
 fraktion: Chaos
 armee: Death Guard
 einheit: Plague Marine
@@ -16,7 +16,7 @@ tags:
 
 ```img-gallery
 path: assets/warhammer-40k/death-guard/plague-marine/blorvak
-type: horizontal
+type: vertical
 sortby: name
 sort: asc
 ```

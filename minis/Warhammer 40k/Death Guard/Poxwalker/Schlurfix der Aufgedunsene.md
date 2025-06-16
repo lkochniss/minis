@@ -1,8 +1,8 @@
 ---
 kategorie: Sci-Fi
 bewertung: 
-fertigstellung: 2020-11-12
-tags: []
+fertigstellung: 2020-11-11
+tags: 
 fraktion: Chaos
 armee: Death Guard
 einheit: Poxwalker

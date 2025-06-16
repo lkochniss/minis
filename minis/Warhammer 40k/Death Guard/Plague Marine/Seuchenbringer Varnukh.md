@@ -1,7 +1,7 @@
 ---
 kategorie: Sci-Fi
 bewertung: 7
-fertigstellung: 2024-04-07
+fertigstellung: 2024-03-25
 tags: 
 fraktion: Chaos
 armee: Death Guard

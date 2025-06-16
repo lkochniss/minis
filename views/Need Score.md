@@ -1,7 +1,7 @@
 ---
 spielsystem: Warhammer 40k
 ---
-Letzte Bilder um den 6.12.22
+Letzte Bilder um den 10.06.24
 ```dataview
 TABLE einheit AS "Einheit", fertigstellung AS "Fertigstellung" 
 FROM "minis" 
