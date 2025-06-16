@@ -4,6 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "techniken": "multitext",
-    "bewertung": "number"
+    "bewertung": "number",
+    "körnung": "number"
   }
 }

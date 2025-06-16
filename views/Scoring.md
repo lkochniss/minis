@@ -1,3 +1,8 @@
+---
+körnung: 5
+---
+
+
 ```dataviewjs 
 const data = dv.pages('"minis"')
 	.where(p => p.fertigstellung && p.bewertung) 
@@ -9,6 +14,7 @@ const data = dv.pages('"minis"')
 	}))
 	.sort((a, b) => new Date(a.label) - new Date(b.label));
 
+// Funktion zum Formatieren des Datums
 function formatDate(dateString) {
     const date = new Date(dateString); 
     const year = date.getFullYear(); 
@@ -17,17 +23,31 @@ function formatDate(dateString) {
     return `${day}.${month}.${year}`; 
 }
 
-const labels = data.map(d => formatDate(new Date(d.label)));
-const values = data.map(d => d.value);
+// Gruppierung der Daten in Gruppen von 5
+const groupedData = [];
+const currentPage = dv.current();
+const dataSlice = parseInt(currentPage.körnung);
 
+for (let i = 0; i < data.length; i += dataSlice) {
+    const group = Array.from(data.slice(i, i + dataSlice));
+   const avgValue = group.reduce((sum, d) => sum + d.value, 0) / group.length; 
+    const groupLabel = group[0].label; // Das Label der ersten Miniatur in der Gruppe
+    groupedData.push({ label: groupLabel, value: avgValue });
+}
+
+// Formatieren der Labels und Werte für das Diagramm
+const labels = groupedData.map(d => formatDate(new Date(d.label)));
+const values = groupedData.map(d => d.value);
+
+// Erstellen des Chart-Datenstrings
 const chartData = ` \`\`\`chart
 
 type: line 
-title: Bewertungen der Miniaturen
-labels: ${JSON.stringify(labels.values)} 
+title: Durchschnittsbewertungen der Miniaturen (je ${dataSlice})
+labels: ${JSON.stringify(labels)} 
 series:
-	- title: Bewertung
-	  data: ${JSON.stringify(values.values)} 
+	- title: Durchschnittliche Bewertung (je ${dataSlice})
+	  data: ${JSON.stringify(values)} 
 tension: 0.2
 width: 80%
 labelColors: false
@@ -38,5 +58,7 @@ bestFitTitle: undefined
 bestFitNumber: 0
   \`\`\` `;
 
+// Ausgabe des Diagramms
 dv.paragraph(chartData);
 ```
+

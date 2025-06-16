@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "views/Need Score.md",
+                "file": "views/Scoring.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Need Score"
+              "title": "Scoring"
             }
           }
         ]
@@ -168,6 +168,14 @@
   },
   "active": "2c06c76c84817b0d",
   "lastOpenFiles": [
+    "views/Search.md",
+    "views/Scoring.md",
+    "views/Need Score.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Drulgor.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Rotgar.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Molov Faecgor.md",
+    "views/Top 20.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Mordhüter Charkon.md",
     "minis/The Witcher Old World/Monster/Manticor.md",
     "minis/The Witcher Old World/Monster/Mittagserscheinung.md",
     "assets/the-witcher-old-world/monster/manticor/PXL_20240607_152811927.jpg",
@@ -206,14 +214,6 @@
     "minis/Warhammer 40k/Death Guard/Plague Marine/Skalgron.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Seuchenzahn Nargul.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Seuchenfürst Morbax.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Seuchenbringer Varnukh.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Sepsor der Gekrümmte.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Rottmak.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Rotgar.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Pestulus, die faulende Klaue.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Pestbeil Borthag.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Pater Malignus.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Nurgan.md",
     "Untitled.canvas"
   ]
 }
