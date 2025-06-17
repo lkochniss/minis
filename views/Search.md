@@ -5,7 +5,7 @@ einheit: Plague Marine
 armee: Death Guard
 fraktion: 
 modelltyp: 
-hersteller: Games Workshop
+hersteller: Sloth Forge
 ---
 
 ```dataview
