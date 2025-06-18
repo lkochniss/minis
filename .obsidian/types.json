@@ -5,6 +5,7 @@
     "tags": "tags",
     "techniken": "multitext",
     "bewertung": "number",
-    "körnung": "number"
+    "körnung": "number",
+    "limit": "number"
   }
 }

@@ -1,5 +1,5 @@
 ---
-körnung: 3
+körnung: 5
 ---
 
 

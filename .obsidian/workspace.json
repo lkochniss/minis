@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
+            "id": "b72d2adf0c10cc4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "views/Worst Minis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Worst Minis"
+            }
+          },
+          {
             "id": "2c06c76c84817b0d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "minis/Warhammer 40k/Death Guard/Plague Marine/Blorvak.md",
+                "file": "views/Search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Blorvak"
+              "title": "Search"
             }
           }
         ]
@@ -166,11 +180,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2c06c76c84817b0d",
+  "active": "b72d2adf0c10cc4c",
   "lastOpenFiles": [
+    "views/Top Minis.md",
+    "views/Worst Minis.md",
+    "views/Worst 10.md",
+    "views/Search.md",
+    "views/Scoring.md",
     "views/Need Score.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Grathok.md",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Moltrus.md",
     "minis/Warhammer 40k/World Eater/Demon Possessed/Gorekrath der Zerreißer.md",
+    "assets/warhammer-40k/world-eater/dreadnought/kharzon-der-kettensarg/PXL_20250617_142056343.jpg",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Murgrax.md",
+    "views/Latest.md",
+    "views/General Stats.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Blorvak.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Rottmak.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Skalgron.md",
@@ -184,7 +208,6 @@
     "assets/warhammer-40k/death-guard/plague-marine/sepsor-grollquell/PXL_20250616_124720135.jpg",
     "assets/warhammer-40k/death-guard/plague-marine/sepsor-grollquell/PXL_20250611_125542612.jpg",
     "assets/warhammer-40k/death-guard/plague-marine/sepsor-grollquell/PXL_20250616_124725628.jpg",
-    "assets/warhammer-40k/death-guard/plague-marine/sepsor-grollquell/PXL_20250611_110134846.jpg",
     "assets/warhammer-40k/death-guard/plague-marine/sepsor-grollquell",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Varnok, der Glockenstreiter.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Vernarbter Borghul.md",
@@ -196,15 +219,6 @@
     "minis/Warhammer 40k/Death Guard/Plague Marine/Faulgrim Schlachterseele.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Fäulnix der Blähende.md",
     "minis/Warhammer 40k/Death Guard/Plague Marine/Festox.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Giftrohr Glurchon.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorthul.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Gorvax, die Bastion der Seuche.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Grathok.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Karrg'thul der Unverrottbare.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Molov Faecgor.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Moltrus.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Morbrakk Faulbiss.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Morbulus.md",
     "assets/the-witcher-old-world/monster/manticor",
     "assets/the-witcher-old-world/monster/mittagserscheinung",
     "assets/the-witcher-old-world/monster/brewess",
