@@ -1,3 +1,4 @@
+
 ```dataview
 TABLE WITHOUT ID Einheit, Anzahl, Min, Max, Avg
 FROM "minis" 

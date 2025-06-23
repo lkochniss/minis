@@ -1,11 +1,27 @@
 ---
-körnung: 5
+spielsystem: 
+einheit: 
+fraktion: 
+armee: Death Guard
+modelltyp: 
+hersteller: 
+körnung: 3
 ---
 
-
 ```dataviewjs 
+
+const currentPage = dv.current();
 const data = dv.pages('"minis"')
-	.where(p => p.fertigstellung && p.bewertung) 
+	.where(p => 
+        p.fertigstellung && 
+        p.bewertung && 
+        (!currentPage.spielsystem || p.spielsystem === currentPage.spielsystem) &&
+        (!currentPage.einheit || p.einheit === currentPage.einheit) &&
+        (!currentPage.fraktion || p.fraktion === currentPage.fraktion) &&
+        (!currentPage.armee || p.armee === currentPage.armee) &&
+        (!currentPage.modelltyp || p.modelltyp === currentPage.modelltyp) &&
+        (!currentPage.hersteller || p.hersteller === currentPage.hersteller)
+    )
 	.sort(k => k.fertigstellung, 'asc')
 	.map(p => ({ 
 		label: p.fertigstellung, 
@@ -25,7 +41,6 @@ function formatDate(dateString) {
 
 // Gruppierung der Daten in Gruppen von 5
 const groupedData = [];
-const currentPage = dv.current();
 const dataSlice = parseInt(currentPage.körnung);
 
 for (let i = 0; i < data.length; i += dataSlice) {

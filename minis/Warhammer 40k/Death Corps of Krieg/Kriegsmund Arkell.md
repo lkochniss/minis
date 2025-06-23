@@ -16,7 +16,7 @@ dauer: "330"
 ## Bilder
 
 ```img-gallery
-path: assets/warhammer-40k/kriegsmund-arkell
+path: assets/warhammer-40k/death-corps-of-krieg/kriegsmund-arkell
 type: horizontal
 sortby: name
 sort: asc

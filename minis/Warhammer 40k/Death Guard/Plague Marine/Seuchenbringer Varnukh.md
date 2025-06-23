@@ -11,6 +11,7 @@ modelltyp: Infanterie
 hersteller: Games Workshop
 techniken:
   - NMM
+  - kitbash
 dauer: "300"
 ---
 ## Bilder

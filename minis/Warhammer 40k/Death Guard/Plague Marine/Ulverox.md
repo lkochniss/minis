@@ -8,7 +8,8 @@ einheit: Plague Marine
 spielsystem: Warhammer 40k
 modelltyp: Infanterie
 hersteller: Games Workshop
-techniken: 
+techniken:
+  - kitbash
 dauer: "180"
 tags:
 ---

@@ -7,9 +7,10 @@ armee: Death Guard
 einheit: Plague Marine
 spielsystem: Warhammer 40k
 modelltyp: Infanterie
-hersteller: Sloth Forge
+hersteller: Games Workshop
 techniken:
   - NMM
+  - kitbash
 dauer: "360"
 tags:
 ---
