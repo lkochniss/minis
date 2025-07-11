@@ -1,7 +1,7 @@
 ---
 kategorie: 
 bewertung: 
-fertigstellung: 2000-01-01
+fertigstellung: ""
 fraktion: 
 armee: 
 einheit: 

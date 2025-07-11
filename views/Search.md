@@ -2,10 +2,10 @@
 spielsystem: 
 bewertung: 
 einheit: Plague Marine
-armee: Death Guard
+armee: 
 fraktion: 
 modelltyp: 
-hersteller: Sloth Forge
+hersteller:
 ---
 
 ```dataview

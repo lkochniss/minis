@@ -2,10 +2,10 @@
 spielsystem: 
 einheit: 
 fraktion: 
-armee: Death Guard
+armee: 
 modelltyp: 
 hersteller: 
-körnung: 3
+körnung: 5
 ---
 
 ```dataviewjs 
