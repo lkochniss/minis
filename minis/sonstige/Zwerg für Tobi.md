@@ -1,6 +1,6 @@
 ---
 kategorie: Fantasy
-bewertung: 
+bewertung: 8.1
 fertigstellung: 2025-07-18
 fraktion: 
 armee: 

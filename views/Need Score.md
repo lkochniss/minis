@@ -1,5 +1,5 @@
 ---
-spielsystem: Warhammer 40k
+spielsystem:
 ---
 
 

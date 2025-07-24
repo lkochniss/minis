@@ -5,7 +5,7 @@ fraktion:
 armee: 
 modelltyp: 
 hersteller: 
-körnung: 5
+körnung: 10
 ---
 
 ```dataviewjs 
