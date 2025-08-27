@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "minis/Warhammer 40k/Death Guard/Poxwalker/Rotzgar der Klumpfüßige.md",
+                "file": "minis/Warhammer 40k/Death Guard/Plague Marine/Morbus Eisenfaust.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rotzgar der Klumpfüßige"
+              "title": "Morbus Eisenfaust"
             }
           }
         ]
@@ -170,32 +170,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b72d2adf0c10cc4c",
+  "active": "579a0420ae2a4810",
   "lastOpenFiles": [
+    "assets/warhammer-40k/death-guard/plague-marine/morbus-eisenfaust/PXL_20250827_060224533.jpg",
     "views/Need Score.md",
-    "minis/Warhammer 40k/Death Guard/Poxwalker/Blährix.md",
-    "minis/Warhammer AoS/Stormcast Eternals/Sequitors/Seraphel Sunwarden.md",
-    "assets/warhammer-40k/death-guard/poxwalker/blährix/PXL_20250815_084805258.jpg",
-    "minis/Warhammer 40k/Death Guard/Poxwalker/Rotzgar der Klumpfüßige.md",
-    "assets/warhammer-40k/death-guard/poxwalker/rotzgar-der-klumpfüßige/PXL_20250815_084826850.jpg",
-    "minis/Warhammer 40k/Death Guard/Poxwalker/Krächzmar.md",
     "views/Scoring.md",
+    "minis/Warhammer AoS/Stormcast Eternals/Sequitors/Maevric Stormhammer.md",
+    "minis/Warhammer AoS/Stormcast Eternals/Sequitors/Cyndra Stormshroud.md",
+    "minis/Warhammer AoS/Stormcast Eternals/Sequitors/Seraphel Sunwarden.md",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250827_055029352.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250819_054136380.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250826_093051260.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250827_055019139.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250827_055002515.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250827_055014086.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250826_093046512.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer/PXL_20250826_093102052.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/maevric-stormhammer",
+    "views/Top Minis.md",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/cyndra-stormshroud/PXL_20250820_170517700.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/cyndra-stormshroud/PXL_20250820_170521680.jpg",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/cyndra-stormshroud",
+    "minis/Warhammer 40k/Death Guard/Plague Marine/Morbus Eisenfaust.md",
+    "minis/Warhammer 40k/Death Guard/Poxwalker/Rotzgar der Klumpfüßige.md",
+    "minis/Warhammer 40k/Death Guard/Poxwalker/Blährix.md",
+    "minis/Warhammer 40k/Death Guard/Poxwalker/Krächzmar.md",
     "views/General Stats.md",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Matschel der Schleimige.md",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Pustor der Ploppende.md",
-    "assets/warhammer-40k/death-guard/poxwalker/matschel-der-schleimige/PXL_20250813_135154285.jpg",
-    "assets/warhammer-40k/death-guard/poxwalker/pustor-der-ploppende/PXL_20250813_135043122.jpg",
-    "assets/warhammer-40k/death-guard/poxwalker/krächzmar/PXL_20250813_135229667.jpg",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Seuchbert.md",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Krustul der Kauernde.md",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Würgl der Schleppende.md",
-    "assets/warhammer-40k/death-guard/poxwalker/krustul-der-kauernde/PXL_20250812_133537302.jpg",
-    "assets/warhammer-40k/death-guard/poxwalker/würgl-der-schleppende/PXL_20250812_133434188.jpg",
-    "assets/warhammer-40k/death-guard/poxwalker/seuchbert/PXL_20250812_133632179.jpg",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Schlurfix der Aufgedunsene.md",
     "minis/Warhammer 40k/Death Guard/Poxwalker/Gammelfred.md",
-    "assets/warhammer-40k/death-guard/poxwalker/gammelfred/PXL_20250811_111203385.jpg",
-    "assets/warhammer-40k/death-guard/poxwalker/schlurfix-der-aufgedunsene/PXL_20250811_111119558.jpg",
     "minis/sonstige/Grimbor.md",
     "assets/warhammer-aos/stormcast-eternals/sequitors/seraphael-sunwarden",
     "minis/Warhammer 40k/Death Corps of Krieg/Kriegsmund Arkell.md",
@@ -206,17 +213,11 @@
     "assets/warhammer-aos/stormcast-eternals",
     "assets/warhammer-aos",
     "views/Worst Minis.md",
-    "views/Top Minis.md",
     "views/Search.md",
     "minis/sonstige/Menhir.md",
     "minis/sonstige/Krokodil.md",
     "minis/sonstige/Cerberus für Franzi.md",
-    "minis/sonstige/Goblin Büste.md",
-    "minis/sonstige/Weihnachts Gremlin.md",
-    "minis/Warhammer 40k/Death Guard/Plague Marine/Blottgar Eiterzahn.md",
     "assets/warhammer-40k/death-guard/plague-marine/decarian-vileheart",
-    "assets/sonstige/zwerg-für-tobi",
-    "assets/warhammer-40k/death-guard/plague-marine/karnul-fäulnisblick",
     "Untitled.canvas"
   ]
 }
