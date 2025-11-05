@@ -1,10 +1,10 @@
 ---
-spielsystem: 
-einheit: 
-armee: 
-fraktion: 
-modelltyp: 
-hersteller: 
+spielsystem:
+einheit:
+armee: Death Guard
+fraktion:
+modelltyp:
+hersteller:
 limit: 10
 ---
 
