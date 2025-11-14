@@ -1,7 +1,7 @@
 ---
 spielsystem:
 einheit:
-armee: Death Guard
+armee:
 fraktion:
 modelltyp:
 hersteller:
