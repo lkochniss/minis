@@ -47,3 +47,7 @@ find "$SRC" -depth | while read -r path; do
 done
 
 echo "Normalization complete. Unmapped items logged to $UNMAPPED."
+
+echo "Cleaning up empty directories..."
+find "$SRC" -type d -empty -delete
+echo "Cleanup complete."
