@@ -16,6 +16,9 @@ done < "$MAPPING"
 
 # Traverse and rename
 # Use find to get deepest items first to avoid parent rename issues
+UNMAPPED="/home/lukas/minis/UNMAPPED.log"
+> "$UNMAPPED"
+
 find "$SRC" -depth | while read -r path; do
     # Skip base
     [[ "$path" == "$SRC" ]] && continue
@@ -37,7 +40,10 @@ find "$SRC" -depth | while read -r path; do
             mv "$path" "$new_path"
             echo "Renamed: $path -> $new_path"
         fi
+    else
+        # Log unmapped
+        echo "$path" >> "$UNMAPPED"
     fi
 done
 
-echo "Normalization complete."
+echo "Normalization complete. Unmapped items logged to $UNMAPPED."
