@@ -1,8 +1,7 @@
-Quelle,Ziel_Pfad
+Quelle_Pfad,Ziel_Pfad
 Warhammer 40.000,Warhammer 40000
 Warhammer 40,000,Warhammer 40000
-Warhammer Age of Sigmar,Warhammer Age of Sigmar
-Chaos,Chaos
-Death Guard,Chaos/Death Guard
-Chaos Space Marines,Chaos/Chaos Space Marines
-Seuchenmarine,Plague-Marine
+Warhammer 40000/Chaos/Seuchenmarine,Warhammer 40000/Chaos/Plague-Marine
+Warhammer 40,000/Chaos/Seuchenmarine,Warhammer 40000/Chaos/Plague-Marine
+Warhammer 40,000/Death Guard/Plague-Marine,Warhammer 40000/Chaos/Death Guard/Plague-Marine
+Warhammer 40,000/Chaos Space Marines/Seuchenmarine,Warhammer 40000/Chaos/Chaos Space Marines/Plague-Marine
