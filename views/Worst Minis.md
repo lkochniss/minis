@@ -1,16 +1,16 @@
 ---
-spielsystem: 
-einheit: 
-armee: Death Guard
-fraktion: 
-modelltyp: 
-hersteller: 
+spielsystem:
+einheit:
+armee:
+fraktion:
+modelltyp:
+hersteller:
 limit: 10
 ---
 
 ```dataview
 TABLE bewertung AS "Bewertung", fertigstellung AS "Fertigstellung" 
-FROM "minis" 
+FROM "reviews" 
 WHERE (spielsystem = this.spielsystem OR !this.spielsystem) 
   AND (einheit = this.einheit OR !this.einheit) 
   AND (armee = this.armee OR !this.armee)

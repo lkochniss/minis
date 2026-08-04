@@ -9,7 +9,7 @@ hersteller:
 
 ```dataview
 TABLE fertigstellung AS "Fertigstellung", bewertung AS "Bewertung"
-FROM "minis" 
+FROM "reviews" 
 WHERE fertigstellung 
   AND (spielsystem = this.spielsystem OR !this.spielsystem) 
   AND (bewertung >= this.bewertung OR !this.bewertung) 

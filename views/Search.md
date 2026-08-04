@@ -1,16 +1,16 @@
 ---
-spielsystem: 
-bewertung: 
-einheit: Plague Marine
-armee: 
-fraktion: 
-modelltyp: 
+spielsystem:
+bewertung:
+einheit:
+armee:
+fraktion:
+modelltyp:
 hersteller:
 ---
 
 ```dataview
 TABLE einheit AS "Einheit", bewertung AS "Bewertung", fertigstellung AS "Fertigstellung" 
-FROM "minis" 
+FROM "reviews" 
 WHERE (spielsystem = this.spielsystem OR !this.spielsystem) 
   AND (bewertung >= this.bewertung OR !this.bewertung) 
   AND (einheit = this.einheit OR !this.einheit) 

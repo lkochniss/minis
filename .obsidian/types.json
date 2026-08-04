@@ -6,6 +6,7 @@
     "techniken": "multitext",
     "bewertung": "number",
     "körnung": "number",
-    "limit": "number"
+    "limit": "number",
+    "fertigstellung": "date"
   }
 }

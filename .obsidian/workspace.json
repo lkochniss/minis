@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "226121875b6e14be",
+        "id": "2cd812076622593e",
         "type": "tabs",
         "children": [
           {
-            "id": "a32e4ebbd5d620fd",
+            "id": "ee1bfc496da89ca6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "colors/Black Wash.md",
+                "file": "reviews/Warhammer Age of Sigmar/Skaven/Clanrat/Clanrat_1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Black Wash"
+              "title": "Clanrat_1"
             }
           }
         ]
@@ -41,10 +41,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Dateiexplorer"
             }
           },
           {
@@ -61,7 +63,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Suchen"
             }
           }
         ]
@@ -84,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "views/Top Minis.md",
+                "file": "minis/Warhammer AoS/Skaven/Clanrats/Krikk-Kritch.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -94,7 +96,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Top Minis"
+              "title": "Rückverweise"
             }
           },
           {
@@ -103,12 +105,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "views/Top Minis.md",
+                "file": "minis/Warhammer AoS/Skaven/Clanrats/Krikk-Kritch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Top Minis"
+              "title": "Ausgehende Links"
             }
           },
           {
@@ -132,13 +134,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "views/Top Minis.md",
+                "file": "minis/Warhammer AoS/Skaven/Clanrats/Krikk-Kritch.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Top Minis"
+              "title": "Gliederung"
             }
           },
           {
@@ -152,7 +154,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "Alle Eigenschaften"
             }
           }
         ],
@@ -165,60 +167,60 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "command-palette:Open command palette": false
+      "graph:Graph-Ansicht öffnen": false,
+      "bases:Neue Base erstellen": false,
+      "switcher:Schnellauswahl öffnen": false,
+      "command-palette:Befehlspalette öffnen": false
     }
   },
-  "active": "a32e4ebbd5d620fd",
+  "active": "ee1bfc496da89ca6",
   "lastOpenFiles": [
-    "colors/Pale Grey.md",
-    "colors/Black Wash.md",
-    "colors/Rotten White.md",
-    "colors/Warm Grey.md",
-    "colors/Dead White.md",
-    "colors/Bone White.md",
-    "colors/Deep Magenta.md",
-    "colors/Blue Wash.md",
-    "colors/Violet Ink.md",
+    "reviews/Warhammer Age of Sigmar/Skaven/Clanrat/Clanrat.md",
+    "views/Latest.md",
+    "views/General Stats.md",
+    "views/Scoring.md",
+    "views/Search.md",
+    "views/Top Minis.md",
+    "views/Worst Minis.md",
+    "views/Need Score.md",
+    "reviews/Warhammer Age of Sigmar/Skaven/Clanrat/Clanrat_1.md",
+    "minis/Warhammer AoS/Skaven/Clanrats/Skrolk.md",
+    "assets/warhammer-aos/skaven/skrolk/PXL_20260716_143451750.jpg",
+    "assets/warhammer-aos/skaven/skrolk/PXL_20260716_143456309.jpg",
+    "assets/warhammer-aos/skaven/skrolk/Pasted image 20260803122651.jpg",
+    "minis/Warhammer AoS/Skaven/Clanrats/Krikk-Kritch.md",
+    "assets/warhammer-aos/skaven/skrolk",
+    "minis/Warhammer AoS/Skaven/Clanrats/Krangg der Unersättliche.md",
+    "assets/warhammer-aos/skaven/krikk-kritch/PXL_20260716_143349603.jpg",
+    "assets/warhammer-aos/skaven/krikk-kritch/PXL_20260716_143355857.jpg",
+    "assets/warhammer-aos/skaven/krikk-kritch/PXL_20260716_143400897.jpg",
+    "assets/warhammer-aos/skaven/krikk-kritch",
+    "assets/warhammer-aos/skaven/krangg-der-unersättliche/PXL_20260716_143323898.jpg",
+    "assets/warhammer-aos/skaven/krangg-der-unersättliche/PXL_20260716_143335264.jpg",
+    "assets/warhammer-aos/skaven/krangg-der-unersättliche/PXL_20260716_143328799.jpg",
+    "assets/warhammer-aos/skaven/krangg-der-unersättliche",
+    "assets/warhammer-aos/skaven/krangg-der-unersättliche.md",
+    "minis/Warhammer AoS/Stormcast Eternals/Sequitors/Cyndra Stormshroud.md",
+    "assets/warhammer-aos/skaven",
+    "minis/Warhammer AoS/Skaven/Clanrats",
+    "minis/Warhammer AoS/Skaven",
+    "minis/00template.md",
+    "views",
+    "minis/sonstige/Zwerg im Fass.md",
+    "minis/sonstige/Zwerg für Tobi.md",
+    "minis/sonstige/Wizzard für Chris.md",
+    "minis/sonstige/Weihnachts Gremlin.md",
+    "minis/sonstige/Voodoo Frau für Christian.md",
+    "minis/sonstige/Thrain.md",
+    "minis/sonstige/Stan für Christian.md",
+    "minis/sonstige/Shadowheart für Chris.md",
+    "minis/sonstige/Red XIII für Chris.md",
     "minis/sonstige/Quezacotl.md",
-    "assets/sonstige/quezacotl/PXL_20251110_091405570.jpg",
-    "assets/sonstige/quezacotl/PXL_20251111_165106578.jpg",
-    "assets/sonstige/quezacotl/PXL_20251113_142809383.PORTRAIT.jpg",
-    "assets/sonstige/quezacotl/PXL_20251113_142748646.PORTRAIT.jpg",
-    "assets/sonstige/quezacotl/PXL_20251112_141447125.jpg",
-    "assets/sonstige/quezacotl/PXL_20251113_142817021.PORTRAIT.jpg",
-    "assets/sonstige/quezacotl/PXL_20251110_152836914.jpg",
-    "assets/sonstige/quezacotl/PXL_20251112_151516998.PORTRAIT.ORIGINAL.jpg",
-    "assets/sonstige/quezacotl/PXL_20251112_141438684.jpg",
-    "assets/sonstige/quezacotl/PXL_20251113_103821365.jpg",
-    "assets/sonstige/quezacotl",
-    "colors/Ice Yellow.md",
-    "colors/Estus Yellow.md",
-    "colors/Toxic Yellow.md",
-    "colors/Sand Yellow.md",
-    "colors/Yellow Ink.md",
-    "colors/Medium Flesh Tone.md",
-    "colors/Skin Wash.md",
-    "colors/Salmon Rose.md",
-    "colors/Dark Flesh.md",
-    "colors/Light Flesh.md",
-    "colors/Orange Brown.md",
-    "colors/Flat Flesh.md",
-    "colors/Sunny Tone.md",
-    "colors/Flesh Wash.md",
-    "colors/Barbarian Skin.md",
-    "colors/Beasty Brown.md",
-    "colors",
-    "assets/warhammer-40k/death-guard/champion/mortarion-für-nils",
-    "assets/the-witcher-old-world/monster/nekkar",
-    "assets/the-witcher-old-world/monster/harpie",
-    "assets/the-witcher-old-world/monster/mitternachterscheinung",
-    "assets/the-witcher-old-world/monster/erscheinung",
-    "assets/the-witcher-old-world/monster/nebling",
-    "assets/the-witcher-old-world/monster/barghest",
-    "assets/the-witcher-old-world/monster/gruftweib",
+    "minis/sonstige/Morgrim.md",
+    "minis/sonstige",
+    "minis/Warhammer AoS/Stormcast Eternals/Sequitors",
+    "minis/Warhammer AoS/Stormcast Eternals",
+    "assets/warhammer-aos/stormcast-eternals/sequitors/seraphael-sunwarden/PXL_20250804_092744182.jpg",
     "Untitled.canvas"
   ]
 }

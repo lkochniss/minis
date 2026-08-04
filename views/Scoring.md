@@ -11,7 +11,7 @@ körnung: 10
 ```dataviewjs 
 
 const currentPage = dv.current();
-const data = dv.pages('"minis"')
+const data = dv.pages('"reviews"')
 	.where(p => 
         p.fertigstellung && 
         p.bewertung && 

@@ -1,15 +1,15 @@
 ---
 kategorie: Miniatur
-bewertung: 6.5/10
-fertigstellung: ""
+bewertung: 6.5
+fertigstellung: 2026-07-16
 fraktion: Skaven
 armee: Skaven
 einheit: Clanrat
 spielsystem: Warhammer Age of Sigmar
 modelltyp: Infanterie
-hersteller: 
-techniken: 
-dauer: 
+hersteller:
+techniken:
+dauer:
 tags:
 ---
 
