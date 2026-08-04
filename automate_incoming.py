@@ -80,7 +80,7 @@ for file in os.listdir(INCOMING_DIR):
         print(f"Verarbeite: {file} (Erkannter Basis-Name: {base_name})")
 
         # 1. Bild mit KI analysieren
-        time.sleep(10) # Pause um Quota zu schonen
+        time.sleep(60) # Pause um Quota zu schonen
         try:
             file_ref = client.files.upload(file=file_path)
             prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}' und fülle das folgende Markdown-Template aus.
@@ -107,7 +107,21 @@ for file in os.listdir(INCOMING_DIR):
                 contents=[file_ref, prompt],
                 config=types.GenerateContentConfig(response_mime_type="application/json")
             )
-            metadata = json.loads(response.text)
+            
+            # Robustere JSON-Parsing
+            raw_text = response.text.strip()
+            if raw_text.startswith("```json"):
+                raw_text = raw_text[7:]
+            if raw_text.endswith("```"):
+                raw_text = raw_text[:-3]
+            raw_text = raw_text.strip()
+            
+            try:
+                metadata = json.loads(raw_text)
+            except json.JSONDecodeError as e:
+                print(f"DEBUG: Fehler beim Parsen. Hier ist die Antwort:")
+                print(raw_text)
+                raise e
         except Exception as e:
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue 
