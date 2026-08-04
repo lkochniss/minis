@@ -13,9 +13,6 @@ dauer:
 tags:
 ---
 
-## Bilder
-![Miniatur](../../../../assets/plaguemarine_40ec54e3b022.jpg)
-
 ## Analyse
 
 ### 📊 Handwerkliche Bewertung (Objektiv)

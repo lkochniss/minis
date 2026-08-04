@@ -13,9 +13,6 @@ dauer:
 tags:
 ---
 
-## Bilder
-![Miniatur](../../../../assets/clanrat_20c1f06f4288.jpg)
-
 ## Analyse
 
 ### 📊 Handwerkliche Bewertung (Objektiv)
