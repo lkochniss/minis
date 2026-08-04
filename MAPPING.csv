@@ -1,7 +1,8 @@
 Quelle_Pfad,Ziel_Pfad
 Warhammer 40.000,Warhammer 40000
 Warhammer 40,000,Warhammer 40000
-Warhammer 40000/Chaos/Seuchenmarine,Warhammer 40000/Chaos/Plague-Marine
-Warhammer 40,000/Chaos/Seuchenmarine,Warhammer 40000/Chaos/Plague-Marine
-Warhammer 40,000/Death Guard/Plague-Marine,Warhammer 40000/Chaos/Death Guard/Plague-Marine
-Warhammer 40,000/Chaos Space Marines/Seuchenmarine,Warhammer 40000/Chaos/Chaos Space Marines/Plague-Marine
+Warhammer 40000/Chaos/Chaos,Warhammer 40000/Chaos
+Warhammer 40000/Chaos/Chaos/Chaos,Warhammer 40000/Chaos
+Warhammer 40000/Chaos/Deathshroud-Terminator,Warhammer 40000/Chaos/Death Guard/Deathshroud Terminator
+Warhammer 40000/Chaos/Plague-Marine,Warhammer 40000/Chaos/Death Guard/Plague Marine
+Warhammer 40000/Chaos/Chaos Space Marines/Plague-Marine,Warhammer 40000/Chaos/Chaos Space Marines/Plague Marine
