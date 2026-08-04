@@ -10,7 +10,7 @@ from google.genai import types
 # Konfiguration
 INCOMING_DIR = "/home/lukas/minis/incoming"
 BASE_DIR = "/home/lukas/minis"
-REVIEWS_DIR = "/home/lukas/minis/reviews"
+PROCESSED_DIR = "/home/lukas/minis/processed"
 STATE_FILE = "/home/lukas/minis/.migration_state.json"
 
 # Argument Parser
@@ -111,10 +111,10 @@ for file in os.listdir(INCOMING_DIR):
         ext = os.path.splitext(file)[1].lower()
         new_filename = f"{base_name.replace(' ', '-').lower()}_{file_hash}{ext}"
 
-        # 3. Ziel-Struktur
+        # 3. Ziel-Struktur (Assets flach, Reviews strukturiert)
         norm_path = get_normalized_path(metadata.get('spielsystem', 'Sonstige'), metadata.get('fraktion', 'None'), metadata.get('einheit', base_name))
-        target_dir_reviews = os.path.join(BASE_DIR, "reviews", norm_path)
-        os.makedirs(target_dir_reviews, exist_ok=True)
+        target_dir_processed = os.path.join(PROCESSED_DIR, norm_path)
+        os.makedirs(target_dir_processed, exist_ok=True)
         target_dir_assets = os.path.join(BASE_DIR, "assets")
         os.makedirs(target_dir_assets, exist_ok=True)
 
@@ -125,15 +125,15 @@ for file in os.listdir(INCOMING_DIR):
         # 5. Markdown Review erstellen
         einheit_name = metadata.get('einheit', base_name)
         md_filename = f"{einheit_name.replace(' ', '-')}.md"
-        md_path = os.path.join(target_dir_reviews, md_filename)
+        md_path = os.path.join(target_dir_processed, md_filename)
 
         counter = 1
         while os.path.exists(md_path):
             md_filename = f"{einheit_name.replace(' ', '-')}_{counter}.md"
-            md_path = os.path.join(target_dir_reviews, md_filename)
+            md_path = os.path.join(target_dir_processed, md_filename)
             counter += 1
 
-        rel_image_path = os.path.relpath(target_image_path, target_dir_reviews)
+        rel_image_path = os.path.relpath(target_image_path, target_dir_processed)
 
         # Build Markdown content
         md_content = f"""---
