@@ -92,7 +92,7 @@ for file in os.listdir(INCOMING_DIR):
               "armee": "Name",
               "einheit": "Singular Name",
               "modelltyp": "Typ",
-              "bewertung": "Durchschnittswert (z.B. 8/10)",
+              "bewertung": "Zahl (float, z.B. 6,5)",
               "technik_ausfuehrung": "Bewertung [X]/10 und Analyse",
               "farbwahl_kontrast": "Bewertung [X]/10 und Analyse",
               "details_tiefe": "Bewertung [X]/10 und Analyse",
