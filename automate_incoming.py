@@ -13,58 +13,45 @@ BASE_DIR = "/home/lukas/minis"
 REVIEWS_DIR = "/home/lukas/minis/reviews"
 STATE_FILE = "/home/lukas/minis/.migration_state.json"
 
-# Argument Parser für Limit
+# Argument Parser
 parser = argparse.ArgumentParser(description="Miniatures Automatisierung")
 parser.add_argument("--limit", type=int, default=None, help="Maximale Anzahl der zu verarbeitenden Bilder")
 args = parser.parse_args()
 
 client = genai.Client()
 
-TEMPLATE_CONTENT = """---
-kategorie: Miniatur
-bewertung: [Durchschnitt/10]
-fertigstellung: ""
-fraktion: {fraktion}
-armee: {armee}
-einheit: {einheit}
-spielsystem: {spielsystem}
-modelltyp: {modelltyp}
-hersteller: 
-techniken: 
-dauer: 
-tags:
----
+# --- FUNKTIONEN ---
+def load_mapping(mapping_file):
+    mapping = {}
+    if os.path.exists(mapping_file):
+        with open(mapping_file, 'r') as f:
+            lines = f.readlines()
+            for line in lines[1:]: # Skip header
+                if ',' in line:
+                    src, dst = line.strip().split(',', 1)
+                    mapping[src] = dst
+    return mapping
 
-## Bilder
-![Miniatur]({image_path})
+def get_normalized_path(spielsystem, fraktion, einheit):
+    raw_path = f"{spielsystem}/{fraktion}/{einheit.replace(' ', '-')}"
+    mapping = load_mapping(os.path.join(BASE_DIR, "MAPPING.csv"))
+    
+    for src, dst in mapping.items():
+        if raw_path.startswith(src):
+            return raw_path.replace(src, dst)
+    return raw_path
 
-## Analyse
+def get_hash(file_path):
+    with open(file_path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:12]
 
-### 📊 Handwerkliche Bewertung (Objektiv)
-- **1. Technik & Ausführung:** [Analyse] ([X]/10)
-- **2. Farbwahl & Kontrast:** [Analyse] ([X]/10)
-- **3. Details & Tiefe:** [Analyse] ([X]/10)
-- **4. Basierung:** [Analyse] ([X]/10)
-- **5. Gesamteindruck:** [Analyse] ([X]/10)
-
-*Durchschnitt:* [Durchschnittswert]
-
-### 💡 Begründung der Bewertung
-[Begründung: Warum X Punkte? Verweis auf Framework]
-"""
-
-# State Management
+# --- HAUPTPROGRAMM ---
 if os.path.exists(STATE_FILE):
     with open(STATE_FILE, 'r') as f:
         state = json.load(f)
 else:
     state = {"processed_files": []}
 
-def get_hash(file_path):
-    with open(file_path, "rb") as f:
-        return hashlib.sha256(f.read()).hexdigest()[:12]
-
-# Process incoming
 processed_count = 0
 for file in os.listdir(INCOMING_DIR):
     if args.limit and processed_count >= args.limit:
@@ -75,12 +62,11 @@ for file in os.listdir(INCOMING_DIR):
         if file_path in state["processed_files"]:
             continue
 
-        # Dateinamen-Extraktion (Name_Nummer -> Name)
         base_name = os.path.splitext(file)[0].split('_')[0].replace("-", " ").title()
         print(f"Verarbeite: {file} (Erkannter Basis-Name: {base_name})")
 
         # 1. Bild mit KI analysieren
-        time.sleep(60) # Pause um Quota zu schonen
+        time.sleep(60)
         try:
             file_ref = client.files.upload(file=file_path)
             prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}' und fülle das folgende Markdown-Template aus.
@@ -108,7 +94,6 @@ for file in os.listdir(INCOMING_DIR):
                 config=types.GenerateContentConfig(response_mime_type="application/json")
             )
             
-            # Robustere JSON-Parsing
             raw_text = response.text.strip()
             if raw_text.startswith("```json"):
                 raw_text = raw_text[7:]
@@ -116,47 +101,17 @@ for file in os.listdir(INCOMING_DIR):
                 raw_text = raw_text[:-3]
             raw_text = raw_text.strip()
             
-            try:
-                metadata = json.loads(raw_text)
-            except json.JSONDecodeError as e:
-                print(f"DEBUG: Fehler beim Parsen. Hier ist die Antwort:")
-                print(raw_text)
-                raise e
+            metadata = json.loads(raw_text)
         except Exception as e:
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue 
 
-        # 2. Hashing (eindeutiger Dateiname für Assets)
+        # 2. Hashing
         file_hash = get_hash(file_path)
         ext = os.path.splitext(file)[1].lower()
         new_filename = f"{base_name.replace(' ', '-').lower()}_{file_hash}{ext}"
 
-# Funktion zum Laden des Mappings
-def load_mapping(mapping_file):
-    mapping = {}
-    if os.path.exists(mapping_file):
-        with open(mapping_file, 'r') as f:
-            lines = f.readlines()
-            for line in lines[1:]: # Skip header
-                src, dst = line.strip().split(',')
-                mapping[src] = dst
-    return mapping
-
-# Normalisierung von Pfaden
-def get_normalized_path(spielsystem, fraktion, einheit):
-    raw_path = f"{spielsystem}/{fraktion}/{einheit.replace(' ', '-')}"
-    mapping = load_mapping(os.path.join(BASE_DIR, "MAPPING.csv"))
-    
-    # Primitiv: checke ob einzelner Teil oder ganzer Pfad im Mapping
-    # Hier vereinfacht: wir nutzen die MAPPING.csv als "Quelle_Pfad,Ziel_Pfad"
-    # Wenn wir den Pfad mappen, überschreiben wir ihn
-    for src, dst in mapping.items():
-        if raw_path.startswith(src):
-            return raw_path.replace(src, dst)
-    return raw_path
-
-# ... später im Skript:
-        # 3. Ziel-Struktur (Assets flach, Reviews strukturiert)
+        # 3. Ziel-Struktur
         norm_path = get_normalized_path(metadata.get('spielsystem', 'Sonstige'), metadata.get('fraktion', 'None'), metadata.get('einheit', base_name))
         target_dir_reviews = os.path.join(BASE_DIR, "reviews", norm_path)
         os.makedirs(target_dir_reviews, exist_ok=True)
@@ -215,14 +170,11 @@ tags:
         with open(md_path, 'w') as f:
             f.write(md_content)
 
-        # 6. State updaten
         state["processed_files"].append(file_path)
         with open(STATE_FILE, 'w') as f:
             json.dump(state, f)
 
         print(f"Erfolgreich migriert: {einheit_name}")
         processed_count += 1
-
-
 
 print("Automatisierung abgeschlossen.")
