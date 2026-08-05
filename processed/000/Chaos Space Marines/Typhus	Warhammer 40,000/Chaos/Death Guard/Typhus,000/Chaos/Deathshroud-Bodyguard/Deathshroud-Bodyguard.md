@@ -1,0 +1,29 @@
+---
+kategorie: Miniatur
+bewertung: 6.4
+fertigstellung: ""
+fraktion: Chaos
+armee: Death Guard
+einheit: Deathshroud Bodyguard
+spielsystem: Warhammer 40,000
+modelltyp: Infanterie
+hersteller: 
+techniken: 
+dauer: 
+tags:
+---
+
+## Bilder
+![Miniatur](../../../../../../../../../assets/deathshroud-bodyguard_9db91cb5110f.jpg)
+
+## Analyse
+
+### 📊 Handwerkliche Bewertung (Objektiv)
+- **1. Technik & Ausführung:** 6.5/10 - Solide aufgetragene Grundfarben mit gut platzierten Washes für die Schattierung. Die Kantenakzente an der grünen Rüstung sind stellenweise etwas ungleichmäßig und dick geraten, erfüllen aber ihren Zweck für den Tabletop-Standard.
+- **2. Farbwahl & Kontrast:** 7.0/10 - Das klassische olivgrüne Schema der Death Guard harmoniert sehr gut mit dem violetten Umhang. Die blauen Rauch-Effekte auf dem Rückenmodul setzen einen schönen kühlen Akzent, während die rötliche Base einen guten Komplementärkontrast bildet.
+- **3. Details & Tiefe:** 6.5/10 - Details wie die Messingglocken, Schläuche und die verrostete Sense wurden gut herausgearbeitet. Die Sense könnte jedoch durch gezieltere Highlights und Wash-Verläufe noch etwas mehr Tiefe vertragen.
+- **4. Basierung:** 5.5/10 - Sehr einfache Basegestaltung mit rötlicher Strukturpaste oder Sand. Hier fehlen zusätzliche Elemente wie Steine, Grasbüschel oder Schädel, um die Base lebendiger wirken zu lassen.
+- **5. Gesamteindruck:** 6.5/10 - Eine solide bemalte Miniatur, die sich hervorragend auf dem Spieltisch präsentieren wird. Für eine höhere Bewertung fehlen fortgeschrittenere Techniken wie sanftere Übergänge (Blending) oder realistischere Witterungseffekte.
+
+### 💡 Begründung der Bewertung
+Die Miniatur zeigt ein sauberes und stimmiges Farbschema mit gutem Kontrast. Ein solides Gesamtergebnis, das vor allem durch die recht simple Basegestaltung und etwas grobe Akzente eine sehr hohe Bewertung verfehlt.

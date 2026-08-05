@@ -1,0 +1,29 @@
+---
+kategorie: Miniatur
+bewertung: 7.5
+fertigstellung: ""
+fraktion: Death Guard
+armee: Death Guard
+einheit: Poxwalker
+spielsystem: Warhammer 40,000
+modelltyp: Infanterie
+hersteller: 
+techniken: 
+dauer: 
+tags:
+---
+
+## Bilder
+![Miniatur](../../../../../../../../../assets/poxwalker_a33f4f970119.jpg)
+
+## Analyse
+
+### 📊 Handwerkliche Bewertung (Objektiv)
+- **1. Technik & Ausführung:** 7.5/10 - Sehr stimmungsvoller Grimdark-Malstil mit weichen Übergängen an der mutierten Haut und realistischen Schmutz- und Metalleffekten.
+- **2. Farbwahl & Kontrast:** 8.0/10 - Die entsättigten, kränklichen Grün- und Brauntöne des Modells bilden einen hervorragenden Komplementärkontrast zur rötlich-orangen Base.
+- **3. Details & Tiefe:** 7.5/10 - Pusteln, Sehnen und das mechanische Auge sind gut ausgearbeitet. Die Schattierungen verleihen dem Modell eine gute plastische Tiefe.
+- **4. Basierung:** 7.0/10 - Einfache, aber effektive Gestaltung mit rötlichem Sand und Pigmenten, die einen tollen Kontrast zur Miniatur liefert.
+- **5. Gesamteindruck:** 7.5/10 - Eine handwerklich sehr solide gestaltete Miniatur, die das pestartige, düstere Thema der Death Guard perfekt einfängt.
+
+### 💡 Begründung der Bewertung
+Die Miniatur überzeugt durch eine sehr atmosphärische Bemalung im Grimdark-Stil. Der starke Farbkontrast zwischen der düsteren Figur und der leuchtenden Base hebt das Modell optisch stark hervor.

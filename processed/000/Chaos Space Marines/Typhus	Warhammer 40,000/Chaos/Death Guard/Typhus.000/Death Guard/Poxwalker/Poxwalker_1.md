@@ -1,0 +1,29 @@
+---
+kategorie: Miniatur
+bewertung: 5.8
+fertigstellung: ""
+fraktion: Death Guard
+armee: Death Guard
+einheit: Poxwalker
+spielsystem: Warhammer 40.000
+modelltyp: Infanterie-Miniatur
+hersteller: 
+techniken: 
+dauer: 
+tags:
+---
+
+## Bilder
+![Miniatur](../../../../../../../../../assets/poxwalker_07ddce4842dd.jpg)
+
+## Analyse
+
+### 📊 Handwerkliche Bewertung (Objektiv)
+- **1. Technik & Ausführung:** 5.5/10 - Die Bemalung wirkt stellenweise etwas dick aufgetragen, wodurch Details leicht verwaschen wirken. Schattierungen wurden vermutlich mit Washes realisiert, die sich in den Vertiefungen etwas unregelmäßig gesammelt haben. Kantenakzente fehlen weitgehend oder sind sehr grob.
+- **2. Farbwahl & Kontrast:** 6.5/10 - Das klassische Nurgle-Farbschema aus kränklichem Grün, Gelb und Knochenfarben wurde gut getroffen. Der blaue Lendenschurz bietet einen guten kühlen Kontrastpunkt, während die rote Base einen sehr starken, fast zu intensiven Komplementärkontrast darstellt.
+- **3. Details & Tiefe:** 5.5/10 - Pusteln, Wunden und das Gesicht sind erkennbar bemalt, aber es mangelt an Tiefe. Mehr Schichten und präzisere Highlights auf den hervorstehenden Stellen (wie den Hörnern und Pusteln) würden dem Modell deutlich mehr Plastizität verleihen.
+- **4. Basierung:** 5.0/10 - Die Base besteht aus einer groben, rötlich-orangen Kiesstruktur. Sie wirkt farblich sehr homogen und lenkt durch die extreme Helligkeit stark von der eigentlichen Miniatur ab. Ein zusätzliches Drybrushing oder Pigmente hätten hier mehr Realismus erzeugt.
+- **5. Gesamteindruck:** 5.8/10 - Eine solide Miniatur im 'Battle Ready'-Standard, die sich gut für den Masseneinsatz auf dem Spieltisch eignet, bei näherer Betrachtung jedoch Luft nach oben in Sachen Präzision und Detailtiefe aufweist.
+
+### 💡 Begründung der Bewertung
+Die Bewertung von 5,8 basiert auf dem soliden, aber einfachen Tabletop-Standard. Die Farbwahl passt gut zum Charakter, allerdings verhindern die dicke Farbschicht, die etwas unsaubere Ausführung der Details und die sehr dominante, monotone Base eine höhere Punktzahl.
