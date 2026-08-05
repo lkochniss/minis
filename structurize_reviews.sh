@@ -11,7 +11,7 @@ echo "Structuring reviews from $SRC to $DEST..."
 # Load mapping
 declare -A MAP
 if [[ -f "$MAPPING" ]]; then
-    while IFS=, read -r src_path dst_path; do
+    while IFS=$'\t' read -r src_path dst_path; do
         if [[ "$src_path" != "Quelle_Pfad" ]]; then
             MAP["$src_path"]="$dst_path"
         fi
@@ -28,11 +28,18 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
     if [[ -n "${MAP[$dir_part]}" ]]; then
         new_dir="${MAP[$dir_part]}"
     else
-        new_dir="$dir_part"
+        # Log and skip if not already logged
+        if ! grep -qF "$dir_part" "/home/lukas/minis/UNMAPPED.log" 2>/dev/null; then
+             echo "$dir_part" >> "/home/lukas/minis/UNMAPPED.log"
+        fi
+        echo "Skipping (unmapped): $rel_path"
+        continue
     fi
     
     # Destination
-    dest_path="$DEST/$new_dir/$file_part"
+    # Remove hidden/control characters from path
+    new_dir_cleaned=$(echo "$new_dir" | tr -d '[:cntrl:]')
+    dest_path="$DEST/$new_dir_cleaned/$file_part"
     
     mkdir -p "$(dirname "$dest_path")"
     

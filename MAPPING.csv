@@ -1,11 +1,3 @@
-Quelle_Pfad,Ziel_Pfad
-Warhammer 40.000,Warhammer 40000
-Warhammer 40,000,Warhammer 40000
-Warhammer 40000/Chaos/Chaos,Warhammer 40000/Chaos
-Warhammer 40000/Chaos/Chaos/Chaos,Warhammer 40000/Chaos
-Warhammer 40000/Chaos/Deathshroud-Terminator,Warhammer 40000/Chaos/Death Guard/Deathshroud Terminator
-Warhammer 40000/Chaos/Plague-Marine,Warhammer 40000/Chaos/Death Guard/Plague Marine
-Warhammer 40000/Chaos/Chaos Space Marines/Plague-Marine,Warhammer 40000/Chaos/Chaos Space Marines/Plague Marine
-Warhammer Age of Sigmar/Skaven/Clanrat,Warhammer Age of Sigmar/Skaven/Clanrat
-Warhammer Age of Sigmar/Skaven,Warhammer Age of Sigmar/Skaven
-Warhammer Age of Sigmar,Warhammer Age of Sigmar
+Quelle_Pfad	Ziel_Pfad
+Warhammer 40,000/Chaos/Lord-of-Contagion	Warhammer 40,000/Chaos/Death Guard/Lord of Cantagion
+Warhammer 40,000/Chaos Space Marines/Typhus	Warhammer 40,000/Chaos/Death Guard/Typhus
