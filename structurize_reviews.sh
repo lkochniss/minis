@@ -45,8 +45,15 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
     
     # Move
     mv "$file" "$dest_path"
-    echo "Structured: $rel_path -> $new_dir/$file_part"
-done
+
+    # Update relative image paths
+    depth=$(echo "$new_dir_cleaned" | tr -cd '/' | wc -c)
+    rel_prefix=""
+    for i in $(seq 1 $((depth + 2))); do rel_prefix="../$rel_prefix"; done
+    sed -i "s|!\[Miniatur\](.*assets/|!\[Miniatur\]($rel_prefixassets/|g" "$dest_path"
+
+    echo "Structured: $rel_path -> $new_dir_cleaned/$file_part"
+    done
 
 # Cleanup empty dirs
 find "$SRC" -type d -empty -delete
