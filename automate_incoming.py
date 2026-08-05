@@ -69,7 +69,9 @@ for file in os.listdir(INCOMING_DIR):
         time.sleep(60)
         try:
             file_ref = client.files.upload(file=file_path)
-            prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}' und fülle das folgende Markdown-Template aus.
+            prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}'.
+            HINWEIS: Das Bild enthält mehrere zusammengesetzte Ansichten derselben Miniatur, um alle Details zu zeigen.
+            Fülle das folgende Markdown-Template aus.
             WICHTIG: Verwende für die Einheit IMMER den SINGULAR.
             Antworte NUR mit einem JSON-Objekt, das diese Felder enthält:
             {{
