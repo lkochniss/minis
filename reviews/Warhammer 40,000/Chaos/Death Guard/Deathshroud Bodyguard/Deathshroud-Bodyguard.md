@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../../assets/deathshroud-bodyguard_be9db1aa4713.jpg)
+![Miniatur](../../../../assets/deathshroud-bodyguard_be9db1aa4713.jpg)
 
 ## Analyse
 

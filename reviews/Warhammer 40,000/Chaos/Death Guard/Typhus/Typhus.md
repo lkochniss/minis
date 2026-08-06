@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../../assets/typhus_3813d395914e.jpg)
+![Miniatur](../../../../assets/typhus_3813d395914e.jpg)
 
 ## Analyse
 
