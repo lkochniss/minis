@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../../../../../../assets/blightlord-terminator_ae606826f0f0.jpg)
+![Miniatur](/blightlord-terminator_ae606826f0f0.jpg)
 
 ## Analyse
 
