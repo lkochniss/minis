@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](/poxwalker_a33f4f970119.jpg)
+![Miniatur](../../../../assets/poxwalker_a33f4f970119.jpg)
 
 ## Analyse
 
