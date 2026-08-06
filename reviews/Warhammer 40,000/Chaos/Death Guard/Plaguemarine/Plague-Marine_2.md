@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../assets/plaguemarine_c488cb0c6ef4.jpg)
+![Miniatur](../../../../../assets/plaguemarine_c488cb0c6ef4.jpg)
 
 ## Analyse
 
