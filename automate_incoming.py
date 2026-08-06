@@ -99,7 +99,15 @@ for file in os.listdir(INCOMING_DIR):
                 raw_text = raw_text[:-3]
             raw_text = raw_text.strip()
             
-            metadata = json.loads(raw_text)
+            # Versuche, das JSON zu parsen; bei Fehler versuchen, mit einem Tipp auszugeben
+            try:
+                metadata = json.loads(raw_text)
+            except json.JSONDecodeError as e:
+                print(f"JSON-Parsing fehlgeschlagen für {file}. Versuche Reparatur...")
+                # Einfache Reparatur für fehlende Kommas (KI-Fehler)
+                # Dies ist heuristisch und nicht perfekt, aber oft hilfreich
+                repaired_text = re.sub(r'("|\d)\n\s*"', r'\1,\n"', raw_text)
+                metadata = json.loads(repaired_text)
         except Exception as e:
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue 
