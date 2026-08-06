@@ -33,13 +33,8 @@ def load_mapping(mapping_file):
     return mapping
 
 def get_normalized_path(spielsystem, fraktion, einheit):
-    raw_path = f"{spielsystem}/{fraktion}/{einheit.replace(' ', '-')}"
-    mapping = load_mapping(os.path.join(BASE_DIR, "MAPPING.csv"))
-    
-    for src, dst in mapping.items():
-        if raw_path.startswith(src):
-            return raw_path.replace(src, dst)
-    return raw_path
+    # Nur noch den Einheitsnamen verwenden
+    return einheit.replace(' ', '-')
 
 def get_hash(file_path):
     with open(file_path, "rb") as f:
