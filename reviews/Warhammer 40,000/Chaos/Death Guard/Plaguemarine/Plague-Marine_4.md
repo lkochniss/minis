@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../../assets/3.jpg)
+![Miniatur](../../../../assets/3.jpg)
 
 ## Analyse
 
