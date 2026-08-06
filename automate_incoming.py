@@ -4,6 +4,7 @@ import hashlib
 import shutil
 import time
 import argparse
+import uuid
 from google import genai
 from google.genai import types
 
@@ -106,7 +107,10 @@ for file in os.listdir(INCOMING_DIR):
         # 2. Hashing
         file_hash = get_hash(file_path)
         ext = os.path.splitext(file)[1].lower()
-        new_filename = f"{base_name.replace(' ', '-').lower()}_{file_hash}{ext}"
+        
+        # UUID für eindeutige Zuweisung
+        item_uuid = str(uuid.uuid4())
+        new_filename = f"{item_uuid}{ext}"
 
         # 3. Ziel-Struktur (Assets flach, Reviews strukturiert)
         norm_path = get_normalized_path(metadata.get('spielsystem', 'Sonstige'), metadata.get('fraktion', 'None'), metadata.get('einheit', base_name))
@@ -121,14 +125,8 @@ for file in os.listdir(INCOMING_DIR):
 
         # 5. Markdown Review erstellen
         einheit_name = metadata.get('einheit', base_name)
-        md_filename = f"{einheit_name.replace(' ', '-')}.md"
+        md_filename = f"{item_uuid}.md"
         md_path = os.path.join(target_dir_processed, md_filename)
-
-        counter = 1
-        while os.path.exists(md_path):
-            md_filename = f"{einheit_name.replace(' ', '-')}_{counter}.md"
-            md_path = os.path.join(target_dir_processed, md_filename)
-            counter += 1
 
         rel_image_path = os.path.relpath(target_image_path, target_dir_processed)
 

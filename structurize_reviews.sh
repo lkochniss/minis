@@ -41,16 +41,7 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
     # Remove hidden/control characters from path
     new_dir_cleaned=$(echo "$new_dir" | tr -d '[:cntrl:]')
 
-    # Handle duplicates by adding a suffix
-    base_name="${file_part%.*}"
-    extension="${file_part##*.}"
     dest_path="$DEST/$new_dir_cleaned/$file_part"
-
-    counter=1
-    while [[ -f "$dest_path" ]]; do
-        dest_path="$DEST/$new_dir_cleaned/${base_name}_${counter}.${extension}"
-        ((counter++))
-    done
 
     mkdir -p "$(dirname "$dest_path")"
 
