@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../assets/lord-of-contagion_ce09b6e948e1.jpg)
+![Miniatur](../../../../../assets/lord-of-contagion_ce09b6e948e1.jpg)
 
 ## Analyse
 
