@@ -61,7 +61,7 @@ for file in os.listdir(INCOMING_DIR):
         print(f"Verarbeite: {file} (Erkannter Basis-Name: {base_name})")
 
         # 1. Bild mit KI analysieren
-        time.sleep(60)
+        time.sleep(360)
         try:
             file_ref = client.files.upload(file=file_path)
             prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}'.
