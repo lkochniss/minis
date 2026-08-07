@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](../../../../../../assets/dd2959ca-fee7-49b8-a984-2eaf6dada14c.jpg)
+![Miniatur](../../../../../assets/dd2959ca-fee7-49b8-a984-2eaf6dada14c.jpg)
 
 ## Analyse
 
