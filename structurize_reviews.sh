@@ -49,17 +49,17 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
     mv "$file" "$dest_path"
 
     # Update relative image paths dynamically based on destination depth
-    # Zähle Slashes im Zielpfad (new_dir_cleaned), um Tiefe zu bestimmen
-    # Bsp: A/B/C -> 2 Slashes -> Tiefe 3 -> 3 Ebenen hoch -> ../../../
+    # Update relative image paths
+    # Berechne Tiefe des neuen Verzeichnisses im Ziel
+    # Die Tiefe muss um 1 höher sein als die Slashes-Anzahl, um aus dem 'reviews' Ordner herauszukommen.
     depth=$(echo "$new_dir_cleaned" | tr -cd '/' | wc -c)
     rel_prefix=""
-    for i in $(seq 1 $((depth + 1))); do rel_prefix="../$rel_prefix"; done
+    for i in $(seq 1 $((depth + 2))); do rel_prefix="../$rel_prefix"; done
 
     sed -i -E "s|!\[Miniatur\]\([^)]*assets/([^)]+)\)|![Miniatur](${rel_prefix}assets/\1)|g" "$dest_path"
 
     echo "Structured: $rel_path -> $new_dir_cleaned/$(basename "$dest_path")"
     done
-
 # Cleanup empty dirs
 find "$SRC" -type d -empty -delete
 echo "Structuring complete."
