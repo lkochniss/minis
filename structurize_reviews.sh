@@ -47,18 +47,18 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
 
     # Move
     mv "$file" "$dest_path"
-# Update relative image paths
-# Berechne Tiefe
-depth=$(echo "$new_dir_cleaned" | tr -cd '/' | wc -c)
-rel_prefix=""
-for i in $(seq 1 $((depth + 2))); do rel_prefix="../$rel_prefix"; done
 
-# Korrektur: Ersetze nur den Pfad vor 'assets/', behalte den Dateinamen bei
-# Regex: ![Miniatur](.*assets/filename.jpg) -> ![Miniatur](rel_prefixassets/filename.jpg)
-sed -i -E "s|!\[Miniatur\]\([^)]*assets/|![Miniatur](${rel_prefix}assets/|g" "$dest_path"
+    # Update relative image paths dynamically based on destination depth
+    # Zähle Slashes im Zielpfad (new_dir_cleaned), um Tiefe zu bestimmen
+    # Bsp: A/B/C -> 2 Slashes -> Tiefe 3 -> 3 Ebenen hoch -> ../../../
+    depth=$(echo "$new_dir_cleaned" | tr -cd '/' | wc -c)
+    rel_prefix=""
+    for i in $(seq 1 $((depth + 1))); do rel_prefix="../$rel_prefix"; done
 
-echo "Structured: $rel_path -> $new_dir_cleaned/$(basename "$dest_path")"
-done
+    sed -i -E "s|!\[Miniatur\]\([^)]*assets/([^)]+)\)|![Miniatur](${rel_prefix}assets/\1)|g" "$dest_path"
+
+    echo "Structured: $rel_path -> $new_dir_cleaned/$(basename "$dest_path")"
+    done
 
 # Cleanup empty dirs
 find "$SRC" -type d -empty -delete
