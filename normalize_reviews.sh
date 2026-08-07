@@ -33,6 +33,14 @@ find "$SRC" -type d -depth | while read -r path; do
             mkdir -p "$(dirname "$target_path")"
             mv "$path" "$target_path"
             echo "Moved: $rel_path -> ${MAP[$rel_path]}"
+            
+            # Repariere Bildpfade in allen MDs im verschobenen Ordner
+            find "$target_path" -name "*.md" | while read -r md_file; do
+                depth=$(echo "$md_file" | tr -cd '/' | wc -c)
+                rel_prefix=""
+                for i in $(seq 1 $((depth))); do rel_prefix="../$rel_prefix"; done
+                sed -i -E "s|!\[Miniatur\]\([^)]*assets/([^)]+)\)|![Miniatur](${rel_prefix}assets/\1)|g" "$md_file"
+            done
         fi
     else
         echo "$rel_path" >> "$UNMAPPED"
