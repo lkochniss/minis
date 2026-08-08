@@ -24,3 +24,4 @@ Wash/Tinte: 2
 # Organisatorisches
 Verwendungshäufigkeit: 
 ---
+![Dead White](/assets/deadwhite-1.jpg)

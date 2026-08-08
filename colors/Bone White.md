@@ -24,3 +24,4 @@ Wash/Tinte: 3
 # Organisatorisches
 Verwendungshäufigkeit: 
 ---
+![Bone White](/assets/bonewhite-1.jpg)

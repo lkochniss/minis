@@ -1,0 +1,6 @@
+- Nur mit passendem Pinsel
+- Etwas Farbe auf z.B. Pappe tropfen
+- Pinsel in Farbe, dann an verschiedenen Stellen der Pappe abtragen bis kaum mehr etwas drin ist
+- Ohne Kraft mit Trockenpinsel über die Figur gehen
+- Erhöhungen werden hervorgehoben, der Rest bleibt unberührt
+- Zu viel Kraft sorgt für Farbe an falschen Stellen oder reibt bisherige Farbe ab!

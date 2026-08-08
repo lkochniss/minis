@@ -24,3 +24,4 @@ Wash/Tinte: 3
 # Organisatorisches
 Verwendungshäufigkeit: 
 ---
+![Bloody Red](/assets/bloody-red-1.jpg)

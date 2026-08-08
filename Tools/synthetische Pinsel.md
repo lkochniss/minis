@@ -1,0 +1,2 @@
+- nur für Basing, nicht für Acrylfarben geeignet
+- nimmt nicht genug Farbe auf für gleichmäßige Striche

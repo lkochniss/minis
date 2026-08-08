@@ -1,0 +1,6 @@
+- Alles mit zwei dünnen Layern [[Light Flesh]] bepinseln
+- "Knochen" mit einer dünnen Schicht [[Bonewhite]] hervorheben
+- Wash mit [[Sepia Shade]]
+- Glaze der "Knochen" mit [[Bonewhite]]
+- Mit [[Bonewhite]] "Knochen" hervorheben, aber nur auf den hohen Stellen
+- Mit [[Flesh Wash]] die Muskeln hervorheben

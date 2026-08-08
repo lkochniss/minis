@@ -1,0 +1,5 @@
+- geeignet für Acrylfarben
+- schließen, wenn nicht in Nutzung
+- braucht Wasser, immer mal nachfüllen
+- Brotpapier oder ähnliches auf Schwamm
+- Zur Reinigung Brotpapier abknibbel und wegwerfen, dann Schwamm mit klarem Wasser ausspülen und neues Papier drauflegen. Wenn es sich zusammenrollt, Papier einfach umdrehen

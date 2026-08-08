@@ -1,0 +1,3 @@
+- kann für alle Modelle genutzt werden
+- trocknet sehr schnell aus, wenn man nicht aufpasst!
+- z.B. Army Painter Super Glue 

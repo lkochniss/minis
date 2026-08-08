@@ -1,0 +1,4 @@
+- Zur Reinigung der Modelle
+- Scharfe Seite für abstehende Stücke
+- Rückseite für Gusslinien
+- Ungeeignet zum Lösen aus der Gussform

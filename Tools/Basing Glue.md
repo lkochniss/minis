@@ -1,0 +1,2 @@
+- Gut für die Base, da billiger und klebt ausreichend stark für z.B. Moos
+- Braucht mindestens eine Stunde zum Aushärten

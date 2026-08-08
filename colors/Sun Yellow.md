@@ -24,3 +24,4 @@ Wash/Tinte: 3
 # Organisatorisches
 Verwendungshäufigkeit: 
 ---
+![Sun Yellow](/assets/sunyellow-1.png)

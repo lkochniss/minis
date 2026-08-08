@@ -1,0 +1,2 @@
+- geeignet für Metall Farben
+- Mit Küchenschaber oder ähnlichen reinigen

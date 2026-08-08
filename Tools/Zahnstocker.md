@@ -1,0 +1,1 @@
+- Geeignet für sehr kleine Punkte zB Augen

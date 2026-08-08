@@ -1,0 +1,3 @@
+- zwei dünne Layer [[Bonewhite]]
+- dann einen dünnen Glaze [[Umber Wash]]
+- einen weiteren Glaze [[Umber Wash]]

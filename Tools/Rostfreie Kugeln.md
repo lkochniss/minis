@@ -1,0 +1,3 @@
+- Kommen in die Farbflaschen
+- Helfen beim Schütteln
+- Manche Hersteller haben direkt Kugeln in Farbe, meist aber nicht

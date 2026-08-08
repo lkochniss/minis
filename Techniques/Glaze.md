@@ -1,0 +1,3 @@
+- Sehr dünne Schicht durch hohen Wasseranteil
+- Konsistenz Testen durch Pinselstrich auf Nagel
+- Wenn Nagel sehr gut zu sehen ist, ist der Glaze gut

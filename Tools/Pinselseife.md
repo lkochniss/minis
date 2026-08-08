@@ -1,0 +1,4 @@
+- Gut für die Reinigung der Pinsel
+- Seife anfeuchten, Pinsel in klares Wasser tunken und dann über die Seife ziehen
+- Farbreste mit sauberem Cewa entfernen
+- Noch etwas Seife hinzufügen und eine Spitze bilden, die dann antrocknen darf

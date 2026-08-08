@@ -1,0 +1,2 @@
+- Geeignet für Washes oder spezielle Farben
+- 

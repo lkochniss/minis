@@ -1,0 +1,2 @@
+- Nur für Plastik-Modelle
+- Verklebt die Nähte, also nur sehr wenig nutzen!

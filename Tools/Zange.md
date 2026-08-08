@@ -1,0 +1,4 @@
+- geeignet für das Lösen aus der Gussform
+- Lieber zu wenig als zu viel Abschneiden
+- Notfalls mit [[Skalpell]] Reste entfernen
+- Dünne geschwungene Spitze hilft in die Gussform zu kommen

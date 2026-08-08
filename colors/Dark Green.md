@@ -24,3 +24,4 @@ Wash/Tinte: 3
 # Organisatorisches
 Verwendungshäufigkeit: 
 ---
+![Dark Green](/assets/darkgreen-1.jpg)
