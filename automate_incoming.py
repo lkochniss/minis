@@ -5,6 +5,7 @@ import shutil
 import time
 import argparse
 import uuid
+import re
 from google import genai
 from google.genai import types
 
@@ -103,7 +104,9 @@ for file in os.listdir(INCOMING_DIR):
             try:
                 metadata = json.loads(raw_text)
             except json.JSONDecodeError as e:
-                print(f"JSON-Parsing fehlgeschlagen für {file}. Versuche Reparatur...")
+                print(f"JSON-Parsing fehlgeschlagen für {file}. Fehler: {e}")
+                print(f"Raw Text: {raw_text}")
+                print("Versuche Reparatur...")
                 # Einfache Reparatur für fehlende Kommas (KI-Fehler)
                 # Dies ist heuristisch und nicht perfekt, aber oft hilfreich
                 repaired_text = re.sub(r'("|\d)\n\s*"', r'\1,\n"', raw_text)
