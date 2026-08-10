@@ -30,6 +30,7 @@ jobs:
         run: |
           mkdir site
           cp -r reviews/* site/
+          touch site/.nojekyll
 
       - name: Fix LFS URLs
         run: |
