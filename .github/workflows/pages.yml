@@ -23,6 +23,7 @@ jobs:
 
       - name: Generate Indexes
         run: |
+          ls -R
           chmod +x generate_indexes.sh
           ./generate_indexes.sh
 
