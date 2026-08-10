@@ -1,6 +1,5 @@
 # Index of Death Guard
 
-## Subfolders
 - [📁 Biologus Putrifier](./Biologus Putrifier/)
 - [📁 Blightlord Terminator](./Blightlord Terminator/)
 - [📁 Deathshroud Bodyguard](./Deathshroud Bodyguard/)
