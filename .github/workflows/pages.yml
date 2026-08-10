@@ -34,6 +34,11 @@ jobs:
           echo "Files in site/:"
           ls -R site
 
+      - name: Convert Markdown to HTML
+        run: |
+          pip install markdown
+          python3 convert_md_to_html.py
+
       - name: Fix LFS URLs
         run: |
           python3 fix_lfs_urls.py site
