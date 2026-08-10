@@ -31,6 +31,8 @@ jobs:
           mkdir site
           cp -r reviews/* site/
           touch site/.nojekyll
+          echo "Files in site/:"
+          ls -R site | head -n 20
 
       - name: Fix LFS URLs
         run: |
