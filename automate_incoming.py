@@ -97,18 +97,30 @@ for file in os.listdir(INCOMING_DIR):
                 
                 # Versuch 2: Versuch, das JSON zu vervollständigen
                 if not repaired_text.strip().endswith('}'):
-                    repaired_text += '"}' # Sehr grobe Reparatur
+                    # Entferne eventuelle unvollständige Schlüssel/Werte am Ende
+                    repaired_text = re.sub(r',\s*$', '', repaired_text.strip())
+                    repaired_text += '}' 
                 
                 try:
                     metadata = json.loads(repaired_text)
                     print("JSON erfolgreich repariert.")
                 except json.JSONDecodeError:
-                    print("JSON-Reparatur fehlgeschlagen.")
-                    failed_file = os.path.join(INCOMING_DIR, f"failed_json_{file}.txt")
-                    with open(failed_file, 'w') as f:
-                        f.write(raw_text)
-                    print(f"Raw Text in {failed_file} gespeichert.")
-                    raise # Rethrow to be caught by the outer except
+                    print("JSON-Reparatur fehlgeschlagen. Versuche Extraktion per Regex.")
+                    # Fallback: Extraktion per Regex
+                    def extract_field(field, text):
+                        match = re.search(f'"{field}":\s*"(.*?)"', text, re.DOTALL)
+                        if match:
+                            return match.group(1)
+                        # Suche nach Zahlenwerten ohne Anführungszeichen
+                        match = re.search(f'"{field}":\s*([^,}}]+)', text, re.DOTALL)
+                        if match:
+                            return match.group(1).strip().strip('"')
+                        return 'Unknown'
+                    
+                    fields = ['spielsystem', 'fraktion', 'armee', 'einheit', 'modelltyp', 'bewertung', 'technik_ausfuehrung', 'farbwahl_kontrast', 'details_tiefe', 'basierung', 'gesamteindruck', 'begruendung']
+                    metadata = {field: extract_field(field, raw_text) for field in fields}
+                    
+                    print("Extraktion per Regex abgeschlossen.")
         except Exception as e:
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue 
