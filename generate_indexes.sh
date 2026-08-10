@@ -2,7 +2,7 @@
 # Recursively generate index.md files for every directory in reviews/
 # Lists only subfolders and .md files (excluding index.md).
 
-DEST="/home/lukas/minis/reviews"
+DEST="reviews"
 
 # Find all directories under reviews/
 find "$DEST" -type d | while read -r dir; do

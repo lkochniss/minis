@@ -21,8 +21,9 @@ jobs:
         with:
           lfs: true
 
-      - name: Generate Indexes
+      - name: Debug and Generate Indexes
         run: |
+          pwd
           ls -R
           chmod +x generate_indexes.sh
           ./generate_indexes.sh
