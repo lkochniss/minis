@@ -44,5 +44,5 @@ def fix_file(file_path):
 for root, dirs, files in os.walk(base_dir):
     print(f"DEBUG: Walking: {root}")
     for file in files:
-        if file.endswith('.md'):
+        if file.endswith(('.md', '.html')):
             fix_file(os.path.join(root, file))
