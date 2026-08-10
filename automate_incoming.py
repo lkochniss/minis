@@ -66,26 +66,11 @@ for file in os.listdir(INCOMING_DIR):
         time.sleep(360)
         try:
             file_ref = client.files.upload(file=file_path)
-            prompt = f"""Analysiere das Bild der Miniatur mit dem Namen '{base_name}'.
-            HINWEIS: Das Bild enthält mehrere zusammengesetzte Ansichten derselben Miniatur, um alle Details zu zeigen.
-            Fülle das folgende Markdown-Template aus.
-            WICHTIG: Verwende für die Einheit IMMER den SINGULAR.
-            Antworte NUR mit einem JSON-Objekt, das diese Felder enthält:
-            {{
-              "spielsystem": "Name",
-              "fraktion": "Name",
-              "armee": "Name",
-              "einheit": "Singular Name",
-              "modelltyp": "Typ",
-              "bewertung": "Zahl (float, z.B. 6,5)",
-              "technik_ausfuehrung": "Bewertung [X]/10 und Analyse",
-              "farbwahl_kontrast": "Bewertung [X]/10 und Analyse",
-              "details_tiefe": "Bewertung [X]/10 und Analyse",
-              "basierung": "Bewertung [X]/10 und Analyse",
-              "gesamteindruck": "Bewertung [X]/10 und Analyse",
-              "begruendung": "Begründung für die Bewertung"
-            }}
-            Wenn du etwas nicht sicher weißt, schreibe 'Unknown'."""
+            prompt = f"""Analysiere das Bild der Miniatur '{base_name}'.
+            Antworte NUR mit einem JSON-Objekt.
+            Felder: spielsystem, fraktion, armee, einheit (Singular), modelltyp, bewertung (Zahl), technik_ausfuehrung, farbwahl_kontrast, details_tiefe, basierung, gesamteindruck, begruendung.
+            Bewertungs-Felder im Format "X/10 - kurze Analyse".
+            Wenn unbekannt, schreibe 'Unknown'."""
 
             response = client.models.generate_content(
                 model='gemini-3.5-flash',
@@ -105,12 +90,25 @@ for file in os.listdir(INCOMING_DIR):
                 metadata = json.loads(raw_text)
             except json.JSONDecodeError as e:
                 print(f"JSON-Parsing fehlgeschlagen für {file}. Fehler: {e}")
-                print(f"Raw Text: {raw_text}")
-                print("Versuche Reparatur...")
-                # Einfache Reparatur für fehlende Kommas (KI-Fehler)
-                # Dies ist heuristisch und nicht perfekt, aber oft hilfreich
-                repaired_text = re.sub(r'("|\d)\n\s*"', r'\1,\n"', raw_text)
-                metadata = json.loads(repaired_text)
+                
+                # Versuch 1: Reparatur von häufigen Fehlern
+                repaired_text = re.sub(r'"\s*\n\s*"', '",\n"', raw_text)
+                repaired_text = re.sub(r'(\d)\s*\n\s*"', r'\1,\n"', repaired_text)
+                
+                # Versuch 2: Versuch, das JSON zu vervollständigen
+                if not repaired_text.strip().endswith('}'):
+                    repaired_text += '"}' # Sehr grobe Reparatur
+                
+                try:
+                    metadata = json.loads(repaired_text)
+                    print("JSON erfolgreich repariert.")
+                except json.JSONDecodeError:
+                    print("JSON-Reparatur fehlgeschlagen.")
+                    failed_file = os.path.join(INCOMING_DIR, f"failed_json_{file}.txt")
+                    with open(failed_file, 'w') as f:
+                        f.write(raw_text)
+                    print(f"Raw Text in {failed_file} gespeichert.")
+                    raise # Rethrow to be caught by the outer except
         except Exception as e:
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue 
