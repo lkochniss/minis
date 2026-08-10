@@ -32,7 +32,7 @@ jobs:
           cp -r reviews/* site/
           touch site/.nojekyll
           echo "Files in site/:"
-          ls -R site | head -n 20
+          ls -R site
 
       - name: Fix LFS URLs
         run: |
