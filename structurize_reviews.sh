@@ -48,15 +48,22 @@ find "$SRC" -type f -name "*.md" | while read -r file; do
     # Move
     mv "$file" "$dest_path"
 
-    # Update relative image paths dynamically based on destination depth
-    # Update relative image paths
-    # Berechne Tiefe des neuen Verzeichnisses im Ziel
-    # Die Tiefe muss um 1 höher sein als die Slashes-Anzahl, um aus dem 'reviews' Ordner herauszukommen.
-    depth=$(echo "$new_dir_cleaned" | tr -cd '/' | wc -c)
-    rel_prefix=""
-    for i in $(seq 1 $((depth + 2))); do rel_prefix="../$rel_prefix"; done
-
-    sed -i -E "s|!\[Miniatur\]\([^)]*assets/([^)]+)\)|![Miniatur](${rel_prefix}assets/\1)|g" "$dest_path"
+    # Extract image filename from MD
+    # Look for ![Miniatur](...) or ![...](...)
+    # We need to get the filename.
+    # Pattern: ![...](.../assets/filename.ext)
+    
+    # Get image path from MD
+    image_rel_path=$(grep -oE "!\[Miniatur\]\([^)]*assets/([^)]+)\)" "$dest_path" | sed -E 's|!\[Miniatur\]\(([^)]*assets/([^)]+))\)|\2|')
+    
+    if [ -n "$image_rel_path" ]; then
+        image_src_path="/home/lukas/minis/assets/$image_rel_path"
+        if [ -f "$image_src_path" ]; then
+            mv "$image_src_path" "$(dirname "$dest_path")/"
+            # Update link in MD to local file
+            sed -i -E "s|!\[Miniatur\]\([^)]*assets/([^)]+)\)|![Miniatur](./$(basename "$image_rel_path"))|g" "$dest_path"
+        fi
+    fi
 
     echo "Structured: $rel_path -> $new_dir_cleaned/$(basename "$dest_path")"
     done
