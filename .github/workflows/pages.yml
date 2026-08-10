@@ -26,13 +26,22 @@ jobs:
           chmod +x generate_indexes.sh
           ./generate_indexes.sh
 
+      - name: Prepare Site Content
+        run: |
+          mkdir site
+          cp -r reviews/* site/
+
+      - name: Fix LFS URLs
+        run: |
+          python3 fix_lfs_urls.py site
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'reviews'
+          path: 'site'
 
       - name: Deploy to GitHub Pages
         id: deployment
