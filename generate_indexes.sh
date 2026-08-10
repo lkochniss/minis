@@ -12,7 +12,10 @@ find "$DEST" -type d | while read -r dir; do
     index_file="$dir/index.md"
     
     # Start fresh
-    echo "# Index of $(basename "$dir")" > "$index_file"
+    echo "---" > "$index_file"
+    echo "---" >> "$index_file"
+    echo "" >> "$index_file"
+    echo "# Index of $(basename "$dir")" >> "$index_file"
     echo "" >> "$index_file"
     
     # 1. Add links to subdirectories (folders)
