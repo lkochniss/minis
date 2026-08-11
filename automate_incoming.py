@@ -6,6 +6,7 @@ import time
 import argparse
 import uuid
 import re
+import sys
 from google import genai
 from google.genai import types
 
@@ -62,6 +63,11 @@ for file in os.listdir(INCOMING_DIR):
         base_name = os.path.splitext(file)[0].split('_')[0].replace("-", " ").title()
         print(f"Verarbeite: {file} (Erkannter Basis-Name: {base_name})")
 
+        # Vorab-Check: Ist es eine valide Bilddatei (kein LFS Pointer)?
+        if os.path.getsize(file_path) < 1000:
+            print(f"Datei {file} zu klein ({os.path.getsize(file_path)} bytes), überspringe.")
+            continue
+
         # 1. Bild mit KI analysieren
         time.sleep(360)
         try:
@@ -77,30 +83,30 @@ for file in os.listdir(INCOMING_DIR):
                 contents=[file_ref, prompt],
                 config=types.GenerateContentConfig(response_mime_type="application/json")
             )
-            
+
             raw_text = response.text.strip()
             if raw_text.startswith("```json"):
                 raw_text = raw_text[7:]
             if raw_text.endswith("```"):
                 raw_text = raw_text[:-3]
             raw_text = raw_text.strip()
-            
+
             # Versuche, das JSON zu parsen; bei Fehler versuchen, mit einem Tipp auszugeben
             try:
                 metadata = json.loads(raw_text)
             except json.JSONDecodeError as e:
                 print(f"JSON-Parsing fehlgeschlagen für {file}. Fehler: {e}")
-                
+
                 # Versuch 1: Reparatur von häufigen Fehlern
                 repaired_text = re.sub(r'"\s*\n\s*"', '",\n"', raw_text)
                 repaired_text = re.sub(r'(\d)\s*\n\s*"', r'\1,\n"', repaired_text)
-                
+
                 # Versuch 2: Versuch, das JSON zu vervollständigen
                 if not repaired_text.strip().endswith('}'):
                     # Entferne eventuelle unvollständige Schlüssel/Werte am Ende
                     repaired_text = re.sub(r',\s*$', '', repaired_text.strip())
-                    repaired_text += '}' 
-                
+                    repaired_text += '}'
+
                 try:
                     metadata = json.loads(repaired_text)
                     print("JSON erfolgreich repariert.")
@@ -108,22 +114,25 @@ for file in os.listdir(INCOMING_DIR):
                     print("JSON-Reparatur fehlgeschlagen. Versuche Extraktion per Regex.")
                     # Fallback: Extraktion per Regex
                     def extract_field(field, text):
-                        match = re.search(f'"{field}":\s*"(.*?)"', text, re.DOTALL)
+                        match = re.search(fr'"{field}":\s*"(.*?)"', text, re.DOTALL)
                         if match:
                             return match.group(1)
                         # Suche nach Zahlenwerten ohne Anführungszeichen
-                        match = re.search(f'"{field}":\s*([^,}}]+)', text, re.DOTALL)
+                        match = re.search(fr'"{field}":\s*([^,}}]+)', text, re.DOTALL)
                         if match:
                             return match.group(1).strip().strip('"')
                         return 'Unknown'
-                    
+
                     fields = ['spielsystem', 'fraktion', 'armee', 'einheit', 'modelltyp', 'bewertung', 'technik_ausfuehrung', 'farbwahl_kontrast', 'details_tiefe', 'basierung', 'gesamteindruck', 'begruendung']
                     metadata = {field: extract_field(field, raw_text) for field in fields}
-                    
+
                     print("Extraktion per Regex abgeschlossen.")
         except Exception as e:
+            if "INVALID_ARGUMENT" in str(e):
+                print(f"Kritischer Fehler (INVALID_ARGUMENT) für {file}, beende Skript: {e}")
+                sys.exit(1)
             print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
-            continue 
+            continue
 
         # 2. Hashing
         file_hash = get_hash(file_path)
