@@ -35,7 +35,7 @@ def load_mapping(mapping_file):
                     mapping[src] = dst
     return mapping
 
-def get_normalized_path(spielsystem, fraktion, einheit):
+def get_normalized_path(einheit):
     # Nur noch den Einheitsnamen verwenden
     return einheit.replace(' ', '-')
 
@@ -143,7 +143,7 @@ for file in os.listdir(INCOMING_DIR):
         new_filename = f"{item_uuid}{ext}"
 
         # 3. Ziel-Struktur (Assets flach, Reviews strukturiert)
-        norm_path = get_normalized_path(metadata.get('spielsystem', 'Sonstige'), metadata.get('fraktion', 'None'), metadata.get('einheit', base_name))
+        norm_path = get_normalized_path(base_name)
         target_dir_processed = os.path.join(PROCESSED_DIR, norm_path)
         os.makedirs(target_dir_processed, exist_ok=True)
         target_dir_assets = os.path.join(BASE_DIR, "assets")
