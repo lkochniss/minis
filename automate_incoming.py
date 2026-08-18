@@ -70,6 +70,7 @@ for file in os.listdir(INCOMING_DIR):
 
         # 1. Bild mit KI analysieren
         time.sleep(360)
+        consecutive_errors = 0
         try:
             file_ref = client.files.upload(file=file_path)
             prompt = f"""Analysiere das Bild der Miniatur '{base_name}'.
@@ -94,6 +95,7 @@ for file in os.listdir(INCOMING_DIR):
             # Versuche, das JSON zu parsen; bei Fehler versuchen, mit einem Tipp auszugeben
             try:
                 metadata = json.loads(raw_text)
+                consecutive_errors = 0 # Erfolg: Zähler zurücksetzen
             except json.JSONDecodeError as e:
                 print(f"JSON-Parsing fehlgeschlagen für {file}. Fehler: {e}")
 
@@ -110,6 +112,7 @@ for file in os.listdir(INCOMING_DIR):
                 try:
                     metadata = json.loads(repaired_text)
                     print("JSON erfolgreich repariert.")
+                    consecutive_errors = 0 # Erfolg: Zähler zurücksetzen
                 except json.JSONDecodeError:
                     print("JSON-Reparatur fehlgeschlagen. Versuche Extraktion per Regex.")
                     # Fallback: Extraktion per Regex
@@ -127,11 +130,21 @@ for file in os.listdir(INCOMING_DIR):
                     metadata = {field: extract_field(field, raw_text) for field in fields}
 
                     print("Extraktion per Regex abgeschlossen.")
+                    consecutive_errors = 0 # Erfolg: Zähler zurücksetzen
         except Exception as e:
             if "INVALID_ARGUMENT" in str(e):
                 print(f"Kritischer Fehler (INVALID_ARGUMENT) für {file}, beende Skript: {e}")
                 sys.exit(1)
-            print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
+            
+            # Fehler zählen, falls Server-Fehler (vereinfachte Prüfung)
+            if any(code in str(e) for code in ["500", "502", "503", "504"]):
+                consecutive_errors += 1
+                print(f"KI Analyse fehlgeschlagen für {file} (Serverfehler {consecutive_errors}/3), überspringe: {e}")
+                if consecutive_errors >= 3:
+                    print("3 Serverfehler in Folge, breche ab.")
+                    sys.exit(1)
+            else:
+                print(f"KI Analyse fehlgeschlagen für {file}, überspringe: {e}")
             continue
 
         # 2. Hashing
@@ -160,37 +173,41 @@ for file in os.listdir(INCOMING_DIR):
 
         rel_image_path = os.path.relpath(target_image_path, target_dir_processed)
 
+        # Bewertung bereinigen (nur numerischen Wert extrahieren)
+        raw_bewertung = str(metadata.get('bewertung', '0'))
+        cleaned_bewertung = re.sub(r'(\d+(\.\d+)?)\s*/\s*10.*', r'\1', raw_bewertung)
+
         # Build Markdown content
         md_content = f"""---
-kategorie: Miniatur
-bewertung: {metadata.get('bewertung', '[Durchschnitt/10]')}
-fertigstellung: ""
-fraktion: {metadata.get('fraktion', 'None')}
-armee: {metadata.get('armee', 'None')}
-einheit: {einheit_name}
-spielsystem: {metadata.get('spielsystem', 'Sonstige')}
-modelltyp: {metadata.get('modelltyp', 'Unknown')}
-hersteller: 
-techniken: 
-dauer: 
-tags:
----
+        kategorie: Miniatur
+        bewertung: {cleaned_bewertung}
+        fertigstellung: ""
+        fraktion: {metadata.get('fraktion', 'None')}
+        armee: {metadata.get('armee', 'None')}
+        einheit: {einheit_name}
+        spielsystem: {metadata.get('spielsystem', 'Sonstige')}
+        modelltyp: {metadata.get('modelltyp', 'Unknown')}
+        hersteller: 
+        techniken: 
+        dauer: 
+        tags:
+        ---
 
-## Bilder
-![Miniatur]({rel_image_path})
+        ## Bilder
+        ![Miniatur]({rel_image_path})
 
-## Analyse
+        ## Analyse
 
-### 📊 Handwerkliche Bewertung (Objektiv)
-- **1. Technik & Ausführung:** {metadata.get('technik_ausfuehrung', 'N/A')}
-- **2. Farbwahl & Kontrast:** {metadata.get('farbwahl_kontrast', 'N/A')}
-- **3. Details & Tiefe:** {metadata.get('details_tiefe', 'N/A')}
-- **4. Basierung:** {metadata.get('basierung', 'N/A')}
-- **5. Gesamteindruck:** {metadata.get('gesamteindruck', 'N/A')}
+        ### 📊 Handwerkliche Bewertung (Objektiv)
+        - **1. Technik & Ausführung:** {metadata.get('technik_ausfuehrung', 'N/A')}
+        - **2. Farbwahl & Kontrast:** {metadata.get('farbwahl_kontrast', 'N/A')}
+        - **3. Details & Tiefe:** {metadata.get('details_tiefe', 'N/A')}
+        - **4. Basierung:** {metadata.get('basierung', 'N/A')}
+        - **5. Gesamteindruck:** {metadata.get('gesamteindruck', 'N/A')}
 
-### 💡 Begründung der Bewertung
-{metadata.get('begruendung', 'N/A')}
-"""
+        ### 💡 Begründung der Bewertung
+        {metadata.get('begruendung', 'N/A')}
+        """
 
         with open(md_path, 'w') as f:
             f.write(md_content)
