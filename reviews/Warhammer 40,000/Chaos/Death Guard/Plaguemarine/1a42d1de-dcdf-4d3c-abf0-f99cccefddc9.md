@@ -14,7 +14,7 @@ tags:
 ---
 
 ## Bilder
-![Miniatur](./93f8a484-0035-40de-827c-f3473cc88952.jpg)
+![Miniatur](./1a42d1de-dcdf-4d3c-abf0-f99cccefddc9.jpg)
 
 ## Analyse
 
