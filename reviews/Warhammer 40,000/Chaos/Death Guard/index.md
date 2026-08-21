@@ -7,6 +7,7 @@
 - [📁 Blightlord Terminator](./Blightlord Terminator/)
 - [📁 Deathshroud Bodyguard](./Deathshroud Bodyguard/)
 - [📁 Lord of Cantagion](./Lord of Cantagion/)
+- [📁 Mortarion](./Mortarion/)
 - [📁 Mortarion Chosen](./Mortarion Chosen/)
 - [📁 Myphitic Blighthauler](./Myphitic Blighthauler/)
 - [📁 Plaguemarine](./Plaguemarine/)
